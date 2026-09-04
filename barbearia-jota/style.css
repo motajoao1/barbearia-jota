@@ -1,0 +1,111 @@
+/* Utilização de Root CSS limitando a exatas 5 cores */
+:root {
+    --cor-1-fundo: #0A0A0A;      
+    --cor-2-texto: #F5F5F5;      
+    --cor-3-titulo: #8A2BE2;     
+    --cor-4-detalhe: #00E5FF;    
+    --cor-5-acao: #FF007F;       
+
+    --fonte-titulo: 'Orbitron', sans-serif;
+    --fonte-texto: 'Roboto', sans-serif;
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body {
+    background-color: var(--cor-1-fundo);
+    color: var(--cor-2-texto);
+    font-family: var(--fonte-texto);
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+header {
+    padding: 3rem 0;
+    border-bottom: 3px solid var(--cor-4-detalhe);
+}
+
+h1 {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-3-titulo);
+    font-size: 3rem;
+    text-shadow: 0 0 10px var(--cor-3-titulo);
+}
+
+.apresentacao {
+    padding: 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.apresentacao p {
+    margin-bottom: 1rem;
+}
+
+/* Estrutura e Animação da Galeria */
+.galeria {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 2.5rem;
+    background-color: var(--cor-1-fundo);
+    border-top: 1px dashed var(--cor-5-acao);
+    border-bottom: 1px dashed var(--cor-5-acao);
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 140px;
+    height: 140px;
+    background-color: var(--cor-4-detalhe);
+    color: var(--cor-1-fundo);
+    font-family: var(--fonte-titulo);
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.card:hover {
+    transform: rotate(5deg) scale(1.15);
+    background-color: var(--cor-5-acao);
+    color: var(--cor-2-texto);
+    box-shadow: 0 0 20px var(--cor-5-acao);
+}
+
+/* Estrutura da Caixa de Vídeo */
+.video-container {
+    padding: 4rem 0;
+}
+
+.video-box {
+    width: 350px;
+    height: 200px;
+    margin: 0 auto;
+    border: 4px solid var(--cor-3-titulo);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: inset 0 0 15px var(--cor-3-titulo);
+    overflow: hidden; 
+}
+
+/* Ajuste para o vídeo preencher a caixa perfeitamente */
+#meuVideo {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}

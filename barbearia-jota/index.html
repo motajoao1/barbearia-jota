@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia do Jota</title>
+    <!-- Virtualização de Fontes -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Barbearia do Jota</h1>
+        </header>
+
+        <main>
+            <section class="apresentacao">
+                <p>Cortes ousados e um ambiente imersivo. A psicologia do nosso espaço une a criatividade do roxo com a inovação do ciano para uma experiência única.</p>
+                <p>Sinta a energia vibrante e a sofisticação do ambiente enquanto renova seu estilo.</p>
+            </section>
+
+            <!-- Galeria Animada -->
+            <section class="galeria">
+                <div class="card">Platinado</div>
+                <div class="card">Corte Blindado</div>
+                <div class="card">Freestyle</div>
+                <div class="card">Pigmentação</div>
+            </section>
+
+            <!-- Caixa de Vídeo -->
+            <section class="video-container">
+                <div class="video-box">
+                    <video id="meuVideo" width="100%" height="100%" muted loop>
+                        <source src="corte.mp4" type="video/mp4">
+                        Seu navegador não suporta a tag de vídeo.
+                    </video>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Script de interação do vídeo -->
+    <script>
+        const video = document.getElementById('meuVideo');
+
+
+        video.addEventListener('mouseenter', () => {
+            video.play();
+        });
+
+
+        video.addEventListener('mouseleave', () => {
+            video.pause();
+        });
+    </script>
+</body>
+</html>
